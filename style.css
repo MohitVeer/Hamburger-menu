@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-items{
+    /* display: none; */
+}
+
+li{
+    list-style: none;
+}
+
+.hamburger-menu{
+    /* border: 4px solid red; */
+    position: relative;
+}
+
+.hamburger-menu input[type="checkbox"]{
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    width: 40px;
+    height: 32px;
+    z-index:5 ;
+    opacity: 0;
+}
+
+.hamburger-lines{
+    
+    width: 40px;
+    height: 32px;
+    /* background: lightseagreen;  */
+    position: absolute;
+    
+    top: 19px;
+    left: 7px ;
+    
+    z-index:2 ;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+.hamburger-lines .line{
+    display: block;
+    background: #232323;
+    
+    height: 4px;
+    width: 100%;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.menu-items{
+    padding-top: 100px;
+    /*display: none;
+    */
+    transform: translateX(-110%);
+    -webkit-transform: translateX(-110%);
+    -moz-transform: translateX(-110%);
+    -ms-transform: translateX(-110%);
+    -o-transform: translateX(-110%);
+    
+    
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+
+    background: #232323;
+    color: white;
+
+    padding-left:  18px; 
+    padding-bottom: 20px;
+
+    margin-left: -15px;
+    margin-top: -15px;
+    /* max-width: 400px; */
+    /* width: 90%; */
+}
+
+.menu-items li{
+    margin-bottom: 2rem ;
+    font-size: 1.5rem;
+    /* margin: 10px auto; */
+}
+
+
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-items{
+    /*display: block;*/
+
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+
+    background: #232323;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line{
+    background: #fff;
+}
+
+.hamburger-lines .line1{
+    transform-origin: 0% 0%;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+.hamburger-lines .line3{
+    transform-origin: 0% 100%;
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+    /* transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg); */
+    display: none;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
